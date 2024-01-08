@@ -1,0 +1,28 @@
+# Function to determine if the number is even or odd
+def check_number(number):
+    if number == 0:
+        return "The entered number is zero."
+    elif number % 2 == 0:
+        return "The entered number is even."
+    else:
+        return "The entered number is odd."
+
+# Main program
+def main():
+    # Prompt user for input
+    user_input = input("Enter a number: ")
+
+    # Validate if the input is a valid integer
+    try:
+        number = int(user_input)
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+        return
+
+    # Call the function to check and print the result
+    result = check_number(number)
+    print(result)
+
+# Run the program
+if __name__ == "__main__":
+    main()
